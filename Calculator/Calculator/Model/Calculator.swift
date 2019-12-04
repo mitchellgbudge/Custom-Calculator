@@ -39,7 +39,6 @@ class Calculator {
     
 }
 
-
 enum Operator: String {
     case addition = "+"
     case subtraction = "−"
