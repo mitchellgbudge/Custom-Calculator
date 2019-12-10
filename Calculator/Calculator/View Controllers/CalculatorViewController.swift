@@ -12,6 +12,11 @@ class CalculatorViewController: UIViewController {
 
     // MARK: - Properties and outlets
     
+    @IBOutlet weak var divideLabel: UIButton!
+    @IBOutlet weak var multiplyLabel: UIButton!
+    @IBOutlet weak var subtrackLabel: UIButton!
+    @IBOutlet weak var addLabel: UIButton!
+    @IBOutlet weak var equalsLabel: UIButton!
     @IBOutlet weak var outputLabel: UILabel!
     var calculator: Calculator?
     
@@ -20,6 +25,7 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         calculator = Calculator()
+        stylize()
     }
     
     // MARK: - Actions and methods
@@ -53,6 +59,12 @@ class CalculatorViewController: UIViewController {
         calculator = Calculator()
     }
 
-    
+    func stylize() {
+        divideLabel.layer.cornerRadius = 50
+        multiplyLabel.layer.cornerRadius = 50
+        subtrackLabel.layer.cornerRadius = 50
+        addLabel.layer.cornerRadius = 50
+        equalsLabel.layer.cornerRadius = 50
+    }
 
 }
