@@ -10,21 +10,26 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
 
+    // MARK: - Properties and outlets
+    
+    var calculator: Calculator?
+    
+    // MARK: - View lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        calculator = Calculator()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Actions and methods
+    
+    
+    
+    func clear() {
+        calculator = nil
+        calculator = Calculator()
     }
-    */
+
+    
 
 }
