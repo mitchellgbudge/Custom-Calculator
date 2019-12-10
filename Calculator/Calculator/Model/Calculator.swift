@@ -13,6 +13,22 @@ class Calculator {
     var secondOperand = ""
     var operatorType: Operator?
     
+    func chainNumber(_ str: String) -> String {
+        if let _ = operatorType {
+            secondOperand += str
+            return secondOperand
+        } else {
+            firstOperand += str
+            return firstOperand
+        }
+    }
+    
+    func setOperator(_ str: String) {
+        if let type = Operator(rawValue: str) {
+            operatorType = type
+        }
+    }
+    
     func calculate() -> String? {
         if !firstOperand.isEmpty,
             !secondOperand.isEmpty,
